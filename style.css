@@ -1,0 +1,52 @@
+/* index */
+.index_h1 {
+  font-size: 60px;
+  text-align: center;
+  margin-top: 30px;
+  color: rgb(54, 54, 54);
+}
+
+.index_h2 {
+  font-size: 45px;
+  color: rgb(73, 73, 73);
+  margin-left: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+/* index-side container */
+.category_list_container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 kolonner */
+  grid-template-rows: auto; /* Juster automatisk højden */
+  text-align: center;
+  margin-top: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 20px;
+  gap: 20px;
+}
+
+/* Styling af individuelle links i kategorierne */
+.category_list_container a {
+  display: block; /* Gør hvert link til en blok */
+  border: 5px solid #6a6a6a; /* Kant rundt om hver kasse */
+  padding: 15px; /* Gør kasserne større */
+  border-radius: 5px; /* Afrundede hjørner */
+  font-weight: bold; /* Gør teksten fed */
+  color: black;
+}
+
+.category_list_container a:hover {
+  transform: scale(1.05);
+}
+
+/* responsivt i computerversion */
+@media (min-width: 769px) {
+  /* index-side container */
+  .category_list_container {
+    grid-template-columns: repeat(3, 1fr); /* 3 kolonner */
+    grid-template-rows: repeat(2, auto); /* 2 rækker */
+  }
+}
