@@ -47,3 +47,24 @@ h3 {
 p {
   font-family: "DM Sans", serif;
 }
+
+.logo {
+  color: black;
+  font-family: "Teko", serif;
+  font-size: 50px;
+  margin-left: 20px; /* Flytter hele elementet til venstre */
+  margin-top: 20px; /* Flytter hele elementet ned */
+  background-color: rgb(189, 208, 184); /* Baggrundsfarve */
+  display: inline-block; /* Baggrund kun om teksten */
+  padding: 2px 15px; /* Justerer luft omkring teksten */
+  text-align: center; /* Centrer teksten horisontalt */
+  line-height: 1; /* Perfekt lodret centrering af teksten */
+  border-radius: 50px; /* Afrundede hjørner */
+}
+
+/* responsivt i computerversion */
+@media (min-width: 769px) {
+  .logo {
+    font-size: 60px;
+  }
+}
