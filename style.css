@@ -1,10 +1,14 @@
-/* index */
-.index_h1 {
+/* h1'ere på alle sider */
+.index_h1,
+.productlist_h1,
+.product_h1 {
   font-size: 60px;
   text-align: center;
   margin-top: 10px;
   color: rgb(54, 54, 54);
 }
+
+/* Index side */
 
 .index_h2 {
   font-size: 45px;
@@ -32,7 +36,6 @@ a {
   border: 5px solid #6a6a6a; /* Kant rundt om hver kasse */
   padding: 15px; /* Gør kasserne større */
   border-radius: 5px; /* Afrundede hjørner */
-  font-weight: bold; /* Gør teksten fed */
   color: black;
   text-align: center;
   font-size: 25px;
@@ -43,10 +46,81 @@ a {
   transform: scale(1.05);
 }
 
+/* Productlist side */
+
+.product_list_container img {
+  width: 350px; /* Billedets bredde */
+  height: auto; /* Bevarer proportionerne */
+  display: block; /* Gør billedet til et blok-element */
+  margin: 0 auto; /* Centrerer det horisontalt */
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.product_list_container {
+  text-align: center;
+}
+
+.product_list_container h3 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.product_list_container p {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.product_list_container a {
+  color: black;
+  text-decoration: underline;
+  font-family: "Smooch Sans", serif;
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Product side */
+
+.product_1 {
+  text-align: center;
+  line-height: 1.8;
+}
+
+.product_1 img {
+  width: 350px; /* Billedets bredde */
+  height: auto; /* Bevarer proportionerne */
+  display: block; /* Gør billedet til et blok-element */
+  margin: 0 auto; /* Centrerer det horisontalt */
+  padding-bottom: 20px;
+}
+
+.product_1 h1 {
+  font-size: 40px;
+}
+
+.product_1 h3 {
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.product_1 p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.product_1 h2 {
+  margin-top: 30px;
+  font-size: 35px;
+}
+
 /* responsivt i computerversion */
 @media (min-width: 769px) {
-  /* index */
-  .index_h1 {
+  /* h1'ere på alle siderne */
+  .index_h1,
+  .productlist_h1,
+  .product_h1 {
     font-size: 70px;
   }
   .index_h2 {
@@ -65,5 +139,48 @@ a {
   }
   .category_list_container a {
     font-size: 40px;
+  }
+
+  .product_list_container {
+    display: flex; /* Gør containeren til en flex-container */
+    justify-content: space-between; /* Fordeler pladsen jævnt mellem elementerne */
+    flex-wrap: wrap; /* Sørger for, at elementer bryder til næste linje, hvis der ikke er plads */
+    gap: 20px; /* Tilføj mellemrum mellem elementerne */
+  }
+
+  .product_list_container div {
+    text-align: center; /* Centrerer indholdet i hver enkelt produktboks */
+    width: 23%; /* Sørger for, at hver div tager cirka 1/4 af containerens bredde */
+    box-sizing: border-box; /* Medregner padding og border i bredden */
+    margin-bottom: 100px; /* Tilføjer mellemrum under hvert produkt */
+  }
+
+  .product_h1 {
+    margin-top: -30px;
+    margin-bottom: -60px;
+  }
+  .product_1 {
+    display: flex; /* Flex container for at placere billedet og teksten side om side */
+    align-items: flex-start; /* Justerer indholdet langs toppen */
+    gap: 20px; /* Tilføjer mellemrum mellem billedet og teksten */
+    padding-left: 20px; /* Tilføjer lidt luft til venstre */
+  }
+
+  .product_1 img {
+    width: 500px; /* Gør billedet større */
+    height: auto; /* Bevarer proportionerne */
+    flex-shrink: 0; /* Forhindrer billedet i at blive mindre, hvis pladsen er trang */
+    margin-top: -50px; /* Flytter billedet lidt opad */
+    margin-left: 30px;
+  }
+
+  .product_text {
+    display: flex; /* Flex container for teksten */
+    flex-direction: column; /* Arrangerer tekstens elementer lodret */
+    gap: 10px; /* Tilføjer mellemrum mellem tekstens elementer */
+    text-align: left; /* Sørger for at teksten justeres til venstre */
+    margin-right: 350px; /* Skaber margin på højre side for at balance layoutet */
+    padding-left: 0; /* Fjerner unødvendig padding */
+    margin-top: 80px;
   }
 }
