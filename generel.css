@@ -31,12 +31,9 @@ img {
   max-width: 100%;
 }
 
-body {
-  background-color: rgb(255, 255, 247);
-}
-
 h1,
-h2 {
+h2,
+h4 {
   font-family: "Teko", serif;
 }
 
@@ -49,22 +46,95 @@ p {
 }
 
 .logo {
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: 20px;
+  margin-top: 15px;
+}
+
+.logo span {
+  color: rgb(125, 146, 115);
+  display: inline-block;
+  transform: scaleX(-1);
+}
+/* MENU */
+header {
+  position: relative;
+  top: 0;
+  align-items: center;
+  padding: 15px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Flyt menuen til højre */
+  position: relative;
+}
+
+/* FOLDBAR MENU */
+.menu {
+  display: none; /* Skjules som standard */
+  flex-direction: column; /* Vertikal menu */
+  position: absolute;
+  top: 40%; /* Ryk menuen lidt op */
+  right: 10px; /* Giv plads fra højre */
+  list-style: none;
+  font-family: "Smooch Sans", serif;
+}
+
+.button-link {
   color: black;
-  font-family: "Teko", serif;
-  font-size: 50px;
-  margin-left: 20px; /* Flytter hele elementet til venstre */
-  margin-top: 20px; /* Flytter hele elementet ned */
-  background-color: rgb(189, 208, 184); /* Baggrundsfarve */
-  display: inline-block; /* Baggrund kun om teksten */
-  padding: 2px 15px; /* Justerer luft omkring teksten */
-  text-align: center; /* Centrer teksten horisontalt */
-  line-height: 1; /* Perfekt lodret centrering af teksten */
-  border-radius: 50px; /* Afrundede hjørner */
+  font-size: 20px;
+}
+/* BURGERMENU */
+.burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 25px;
+  width: 30px;
+  cursor: pointer;
+  position: relative;
+  top: -30px; /* Ryk burgerikonet lidt op */
+  right: 20px; /* Giv plads fra højre */
+}
+
+/* Stregerne i burgermenu */
+.burger .line {
+  height: 3px;
+  width: 100%;
+  background-color: black;
+}
+
+.menu.active {
+  display: flex;
 }
 
 /* responsivt i computerversion */
 @media (min-width: 769px) {
   .logo {
     font-size: 60px;
+  }
+
+  /* burgermenu fjernes */
+  .burger {
+    display: none;
+  }
+
+  /* normal menu vises */
+  .menu {
+    display: flex; /* Gør menuen synlig hele tiden */
+    flex-direction: row;
+    position: static;
+    gap: 50px;
+    padding: 0;
+    margin-right: 80px;
+    margin-top: -80px;
+  }
+
+  .button-link {
+    font-size: 30px;
+    font-weight: bold;
   }
 }
