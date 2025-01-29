@@ -138,6 +138,15 @@ a {
   text-align: center;
 }
 
+.size_text {
+  font-family: "DM Sans", serif;
+  font-size: 16px;
+  margin-top: 30px;
+}
+#size {
+  font-family: "DM Sans", serif;
+}
+
 .add-to-basket {
   background-color: #000000;
   color: white;
@@ -219,11 +228,14 @@ a {
     flex-direction: column; /* Arrangerer tekstens elementer lodret */
     gap: 10px; /* Tilføjer mellemrum mellem tekstens elementer */
     text-align: left; /* Sørger for at teksten justeres til venstre */
-    margin-right: 350px; /* Skaber margin på højre side for at balance layoutet */
+    margin-right: 250px; /* Skaber margin på højre side for at balance layoutet */
     padding-left: 0; /* Fjerner unødvendig padding */
     margin-top: 80px;
   }
 
+  .size_text {
+    font-size: 18px;
+  }
   .add-to-basket {
     width: fit-content; /* Sørger for, at baggrunden kun passer til teksten */
   }
