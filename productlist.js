@@ -1,4 +1,4 @@
-const ProductContainer = document.querySelector(".product_list_container");
+let productContainer = document.querySelector(".product_list_container");
 
 fetch(`https://kea-alt-del.dk/t7/api/products/`)
   .then((response) => response.json())
@@ -7,14 +7,18 @@ fetch(`https://kea-alt-del.dk/t7/api/products/`)
 function showList(products) {
   console.log(products);
   let markup = "";
-  markup = products.map((product) => {
-    ` <div class="product_list_container">
+  products
+    .map((product) => {
+      markup += `
     <div class="blaa_tshirt">
-      <img src="https://kea-alt-del.dk/t7/images/webp/640/1163.webp" alt="blaa_tshirt" />
-      <h3>Sahara Team India Fanwear Round Neck Jersey</h3>
+      <img src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp" alt="blaa_tshirt" />
+      <h3>${product.productdisplayname}</h3>
       <p>Tshirts - Nike</p>
-      <p>DKK 895,-</p>
+      <p>DKK${product.price},-</p>
       <a href="product.html">Read More</a>
     </div>`;
-  });
+    })
+    .join("");
+  console.log(markup);
+  productContainer.innerHTML = markup;
 }
