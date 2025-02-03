@@ -1,4 +1,3 @@
-// bestemt produkt - link til blå jersey
 const ProductContainer = document.querySelector(".product_1");
 const productId = 1163;
 
