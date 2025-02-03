@@ -18,7 +18,7 @@ function showList(products) {
       <h3>${product.productdisplayname}</h3>
       <p>Tshirts - Nike</p>
       <p>DKK${product.price},-</p>
-      <a href="product.html">Read More</a>
+      <a href="product.html?productId=${product.id}">Read More</a>
     </div>
     `
     )
