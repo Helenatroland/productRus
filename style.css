@@ -238,7 +238,7 @@ a {
     flex-direction: column; /* Arrangerer tekstens elementer lodret */
     gap: 10px; /* Tilføjer mellemrum mellem tekstens elementer */
     text-align: left; /* Sørger for at teksten justeres til venstre */
-    margin-right: 250px; /* Skaber margin på højre side for at balance layoutet */
+    margin-right: 100px; /* Skaber margin på højre side for at balance layoutet */
     padding-left: 0; /* Fjerner unødvendig padding */
     margin-top: 80px;
   }
