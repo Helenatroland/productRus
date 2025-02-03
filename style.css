@@ -1,3 +1,11 @@
+html,
+body {
+  overflow-x: hidden; /* Forhindrer horisontal scrolling */
+  margin: 0; /* Fjerner eventuelle marginer, der kan skabe scrolling */
+  padding: 0;
+  width: 100%;
+}
+
 /* h1'ere på alle sider */
 .index_h1,
 .productlist_h1,
@@ -21,8 +29,6 @@ a {
 /* index-side container */
 .category_list_container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 kolonner */
-  grid-template-rows: auto; /* Juster automatisk højden */
   gap: 20px;
   margin-top: 30px;
   margin-left: 30px;
@@ -33,12 +39,11 @@ a {
 /* Styling af individuelle links i kategorierne */
 .category_list_container a {
   display: block; /* Gør hvert link til en blok */
-  border: 5px solid #6a6a6a; /* Kant rundt om hver kasse */
+  background-color: #6a6a6a; /* Kant rundt om hver kasse */
   padding: 15px; /* Gør kasserne større */
-  border-radius: 5px; /* Afrundede hjørner */
   color: black;
   text-align: center;
-  font-size: 25px;
+  font-size: 30px;
   font-weight: bold;
 }
 
@@ -175,26 +180,31 @@ a {
   .index_h2 {
     margin-bottom: 100px;
     margin-left: 80px;
-    font-size: 55px;
+    font-size: 60px;
   }
-  /* index-side container */
   .category_list_container {
+    display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 kolonner */
-    grid-template-rows: repeat(2, auto); /* 2 rækker */
-    gap: 60px;
-    margin-left: 70px;
-    margin-right: 70px;
-    margin-bottom: 200px;
+    grid-template-rows: repeat(2, 1fr); /* 2 rækker med lige store kasser */
+    margin-left: 35px;
+    margin-bottom: 30px;
+    place-items: center; /* Centrerer kasserne i grid'et */
   }
+
   .category_list_container a {
-    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 350px; /* En smule bredere for bedre proportioner */
+    height: 100px; /* Lidt lavere for et mere aflangt look */
+    font-size: 35px;
+    padding: 20px; /* Sørger for mere luft omkring teksten */
   }
 
   .product_list_container {
     display: flex; /* Gør containeren til en flex-container */
     justify-content: space-between; /* Fordeler pladsen jævnt mellem elementerne */
     flex-wrap: wrap; /* Sørger for, at elementer bryder til næste linje, hvis der ikke er plads */
-    gap: 20px; /* Tilføj mellemrum mellem elementerne */
   }
 
   .product_list_container div {
