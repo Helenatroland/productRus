@@ -13,13 +13,16 @@ function showList(products) {
   const markup = products
     .map(
       (product) => `
-    <div class="blaa_tshirt">
-      <img src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp" alt="blaa_tshirt" />
-            <p>${product.brandname}</p>
-      <h3>${product.productdisplayname}</h3>
-      <p>DKK${product.price},-</p>
-      <a href="product.html?productId=${product.id}">Read More</a>
-    </div>
+<div class="blaa_tshirt">
+            <img src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp" alt="blaa_tshirt" />
+            ${product.discount ? `<div class="percentage_off_list"><p>${product.discount}% Off</p></div>` : ""}
+        <p>${product.brandname}</p>
+        <h3>${product.productdisplayname}</h3>
+        <p>DKK ${product.price},-</p>
+        <a href="product.html?productId=${product.id}">Read More</a>
+</div>
+
+
     `
     )
     .join("");

@@ -26,7 +26,7 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${productId}`)
           <h3> Articletype: ${data.articletype}</h3>
           <p> ${data.description}</p>
           <h3>Id number: ${data.id}</h3>
-          <h3>${data.discount}% off</h3>
+           ${data.discount ? `<div class="percentage_off"><p>${data.discount}% Off</p></div>` : ""}
           <h2>${data.brandname}</h2>
           <p>${data.brandbio}</p>
           <div class="size_text">
