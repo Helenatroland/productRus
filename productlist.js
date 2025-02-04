@@ -15,8 +15,8 @@ function showList(products) {
       (product) => `
     <div class="blaa_tshirt">
       <img src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp" alt="blaa_tshirt" />
+            <p>${product.brandname}</p>
       <h3>${product.productdisplayname}</h3>
-      <p>Tshirts - Nike</p>
       <p>DKK${product.price},-</p>
       <a href="product.html?productId=${product.id}">Read More</a>
     </div>

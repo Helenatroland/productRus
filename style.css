@@ -110,6 +110,9 @@ a {
 .product_1 {
   text-align: center;
   line-height: 1.8;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 8px rgb(176, 176, 176);
 }
 
 .product_1 img {
@@ -215,21 +218,22 @@ a {
   }
 
   .product_h1 {
-    margin-top: -30px;
-    margin-bottom: -60px;
+    margin-top: -100px;
+    margin-bottom: -100px;
   }
   .product_1 {
     display: flex; /* Flex container for at placere billedet og teksten side om side */
     align-items: flex-start; /* Justerer indholdet langs toppen */
     gap: 20px; /* Tilføjer mellemrum mellem billedet og teksten */
     padding-left: 20px; /* Tilføjer lidt luft til venstre */
+    margin-top: -100px;
   }
 
   .product_1 img {
-    width: 500px; /* Gør billedet større */
+    width: 400px; /* Gør billedet større */
     height: auto; /* Bevarer proportionerne */
     flex-shrink: 0; /* Forhindrer billedet i at blive mindre, hvis pladsen er trang */
-    margin-top: -50px; /* Flytter billedet lidt opad */
+    margin-top: -100px; /* Flytter billedet lidt opad */
     margin-left: 30px;
   }
 
