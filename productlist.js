@@ -9,23 +9,26 @@ fetch(`https://kea-alt-del.dk/t7/api/products?category=${myCategory}`)
   .then((data) => showList(data));
 
 function showList(products) {
-  console.log(products);
   const markup = products
-    .map(
-      (product) => `
-<div class="blaa_tshirt">
-            <img src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp" alt="blaa_tshirt" />
+    .map((product) => {
+      let productSoldOut = product.soldout ? "soldOut" : "";
+      let soldOutTag = product.soldout ? `<p class="sold_out">Sold Out</p>` : "";
+
+      return `
+        <article class="produktkort ${productSoldOut}">
+          <div class="blaa_tshirt">
+            <img src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp" alt="${product.productdisplayname}" />
             ${product.discount ? `<div class="percentage_off_list"><p>${product.discount}% Off</p></div>` : ""}
-        <p>${product.brandname}</p>
-        <h3>${product.productdisplayname}</h3>
-        <p>DKK ${product.price},-</p>
-        <a href="product.html?productId=${product.id}">Read More</a>
-</div>
-
-
-    `
-    )
+            ${soldOutTag}
+            <p>${product.brandname}</p>
+            <h3>${product.productdisplayname}</h3>
+            <p>DKK ${product.price},-</p>
+            <a href="product.html?productId=${product.id}">Read More</a>
+          </div>
+        </article>
+      `;
+    })
     .join("");
-  console.log(markup);
+
   productContainer.innerHTML = markup;
 }

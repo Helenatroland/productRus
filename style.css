@@ -118,6 +118,14 @@ a {
   margin-top: 10px;
 }
 
+.product_list_container a {
+  font-size: 25px;
+}
+
+.product_list_container p {
+  font-size: 22px;
+}
+
 /* Product side */
 
 .product_1 {
@@ -149,6 +157,18 @@ a {
   position: absolute; /* Absolut placering for at placere rabatmærket */
   top: 310px; /* Justeret til at placere rabatmærket lidt længere nede */
   right: 75px; /* Placerer rabatmærket tættere på højre */
+}
+
+.soldOut {
+  opacity: 0.5; /* Gør billedet gråtonet */
+  pointer-events: none; /* Deaktiverer klik */
+}
+
+.sold_out {
+  color: black;
+  background-color: red;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .product_1 h1 {
@@ -265,6 +285,10 @@ a {
 
   .product_list_container h3 {
     margin-bottom: 30px;
+  }
+
+  .product_list_container a {
+    font-size: 25px;
   }
 
   /* Placering af rabatmærket */
